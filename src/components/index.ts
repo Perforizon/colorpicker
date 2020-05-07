@@ -1,2 +1,3 @@
-export * from "./TestComponent/TestComponent";
-export * from "./HueCanvas";
+export * from "./test-component";
+export * from "./hue-canvas";
+export * from "./webgl-color-picker-canvas";

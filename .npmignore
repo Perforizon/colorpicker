@@ -9,3 +9,4 @@ rollup.config.js
 tsconfig.json
 jest.config.js
 jest.setup.ts
+.stories.tsx
