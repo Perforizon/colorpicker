@@ -2,7 +2,7 @@ import GLC from "./webgl-commander";
 import SBGRenderer from "./renderer";
 import ModelType from "./model";
 import ModelInstance from "./model-instance";
-import { VEC4, VEC2 } from "@perforizon/math";
+import { VEC4 } from "@perforizon/math";
 
 export default (
   canvas: HTMLCanvasElement,
@@ -11,7 +11,7 @@ export default (
   glc: GLC,
   patternColor0?: VEC4,
   patternColor1?: VEC4,
-  patternSize?: VEC2,
+  patternSize?: number,
   opacity?: number
 ) => {
   if (!canvas) return;

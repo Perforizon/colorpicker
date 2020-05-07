@@ -5,16 +5,16 @@ import GLC from "../webgl/webgl-commander";
 import {SubShaderType} from "../webgl/shader/subshader-type";
 import {VEC4, VEC2} from "@perforizon/math";
 
-interface Props extends Omit<React.DetailedHTMLProps<React.CanvasHTMLAttributes<HTMLCanvasElement>, HTMLCanvasElement>, "color"> {
+export interface WebglColorPickerCanvasProps extends Omit<React.DetailedHTMLProps<React.CanvasHTMLAttributes<HTMLCanvasElement>, HTMLCanvasElement>, "color"> {
   color : VEC4,
   subShaderType : SubShaderType,
   patternColor0 ?: VEC4,
   patternColor1 ?: VEC4,
-  patternSize ?: VEC2,
+  patternSize ?: number,
   opacity ?: number
 }
 
-export const WebglColorPickerCanvas = (props : Props) => {
+export const WebglColorPickerCanvas = (props : WebglColorPickerCanvasProps) => {
   // omit color from forwarded props
   const {color, ...forwardProps} = props;
   const ref = useRef(null);

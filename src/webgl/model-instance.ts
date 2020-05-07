@@ -14,7 +14,7 @@ export default class {
   patternColor1: VEC4;
   opacity: number;
   // size
-  patternSize: VEC2;
+  patternSize: number;
   canvasSize: VEC2;
   //
   subShaderType: number;
@@ -26,15 +26,15 @@ export default class {
     subShaderType: number,
     patternColor0?: VEC4,
     patternColor1?: VEC4,
-    patternSize?: VEC2
+    patternSize?: number
   ) {
     this.transformationMatrix = Mat4Identity;
     this.color = color;
-    this.opacity = opacity;
     this.canvasSize = canvasSize;
     this.subShaderType = subShaderType;
+    this.opacity = opacity ? opacity : 1;
     this.patternColor0 = patternColor0 ? patternColor0 : [0.8, 0.8, 0.8, 1.0];
     this.patternColor1 = patternColor1 ? patternColor1 : [1.0, 1.0, 1.0, 1.0];
-    this.patternSize = patternSize ? patternSize : [16, 16];
+    this.patternSize = patternSize ? patternSize : 16;
   }
 }

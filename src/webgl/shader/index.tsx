@@ -85,8 +85,8 @@ export default class {
     this.glc.uploadVec4Uniform(this.patternColor1, color);
   }
 
-  enablePatternSize(size: VEC2) {
-    this.glc.uploadVec2Uniform(this.patternSize, size);
+  enablePatternSize(size: number) {
+    this.glc.upload1FUniform(this.patternSize, size);
   }
 
   enableSize(size: VEC2) {

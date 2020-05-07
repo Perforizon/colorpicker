@@ -6,7 +6,7 @@ export default `
     uniform mediump vec4 ${Locations.PATTERN_COLOR0};
     uniform mediump vec4 ${Locations.PATTERN_COLOR1};
     uniform mediump vec2 ${Locations.SIZE};
-    uniform mediump vec2 ${Locations.PATTERN_SIZE};
+    uniform mediump float ${Locations.PATTERN_SIZE};
     uniform mediump float ${Locations.OPACITY};
     uniform int ${Locations.SUBSHADERTYPE};
 
@@ -22,8 +22,8 @@ export default `
 
     vec4 Checkerboard()
     {
-        int checkerboardWidth = int(${Locations.PATTERN_SIZE}.x);
-        int checkerboardHeight = int(${Locations.PATTERN_SIZE}.y);
+        int checkerboardWidth = int(${Locations.PATTERN_SIZE});
+        int checkerboardHeight = int(${Locations.PATTERN_SIZE});
         vec4 _patternColor0 = ${Locations.PATTERN_COLOR0};
         vec4 _patternColor1 = ${Locations.PATTERN_COLOR1};
 
